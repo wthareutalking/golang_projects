@@ -1,8 +1,10 @@
 package main
 
 import (
-	"context"
 	"fmt"
+	// "os"
+
+	"context"
 	"restapi/http"
 	"restapi/sql/connection"
 	"restapi/sql/database"
@@ -79,4 +81,10 @@ func main() {
 	if err := httpServer.StartServer(); err != nil {
 		fmt.Println("failed to start HTTP Server: ", err)
 	}
+	// val := os.Getenv("phone_number")
+	// if val != "" {
+	// 	fmt.Println("val:", val)
+	// } else {
+	// 	fmt.Println("Переменная val не задана!")
+	// }
 }
